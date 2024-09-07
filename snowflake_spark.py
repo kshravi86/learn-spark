@@ -2,7 +2,7 @@ import os
 from pyspark.sql import SparkSession
 
 # Snowflake connection details
-    spark = SparkSession.builder.appName('Snowflake Spark Example').getOrCreate()
+spark = SparkSession.builder.appName('Snowflake Spark Example').getOrCreate()
     try:
         # Load Snowflake Spark connector
         spark._jvm.net.snowflake.spark.snowflake
