@@ -1,15 +1,7 @@
+import os
 from pyspark.sql import SparkSession
 
 # Snowflake connection details
-SF_ACCOUNT = 'your_account_name'
-SF_USER = 'your_username'
-SF_PASSWORD = 'your_password'
-SF_WAREHOUSE = 'your_warehouse_name'
-SF_DB = 'your_database_name'
-SF_SCHEMA = 'your_schema_name'
-
-# Create a SparkSession
-def main():
     spark = SparkSession.builder.appName('Snowflake Spark Example').getOrCreate()
     try:
         # Load Snowflake Spark connector
