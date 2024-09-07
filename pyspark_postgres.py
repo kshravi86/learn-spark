@@ -20,7 +20,7 @@ df = spark.read.format("jdbc").option("url", url).option("query", "SELECT * FROM
 # Display the data
 df.show()
 
-# Write data to Postgres
+# Write data to MySQL
 data = [("John", 25), ("Mary", 31), ("David", 42)]
 schema = StructType([StructField("name", StringType()), StructField("age", IntegerType())])
 df = spark.createDataFrame(data, schema)
