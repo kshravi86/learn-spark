@@ -10,11 +10,11 @@ host = "your_host"
 port = 5432
 database = "your_database"
 
-# Create a Postgres connection
-url = f"jdbc:postgresql://{host}:{port}/{database}"
-properties = {"user": username, "password": password, "driver": "org.postgresql.Driver"}
+# Create a MySQL connection
+url = f"jdbc:mysql://{host}:{port}/{database}"
+properties = {"user": username, "password": password, "driver": "com.mysql.cj.jdbc.Driver"}
 
-# Read data from Postgres
+# Read data from MySQL
 df = spark.read.format("jdbc").option("url", url).option("query", "SELECT * FROM your_table").option("user", username).option("password", password).load()
 
 # Display the data
