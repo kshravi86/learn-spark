@@ -1,7 +1,7 @@
 FROM python:3.9-slim
 
 # Install Spark and necessary dependencies
-RUN pip install pyspark
+RUN pip install pyspark findspark
 
 # Create a directory for the Spark example
 WORKDIR /app
@@ -13,4 +13,4 @@ COPY spark_example.py /app/
 EXPOSE 4040
 
 # Run the Spark example when the container starts
-CMD ["python", "spark_example.py"]
+CMD ["python", "-m", "findspark", "spark_example.py"]
