@@ -10,6 +10,7 @@ SF_SCHEMA = 'your_schema_name'
 
 # Create a SparkSession
 def main():
+    spark = SparkSession.builder.appName('Snowflake Spark Example').getOrCreate()
     try:
         # Load Snowflake Spark connector
         spark._jvm.net.snowflake.spark.snowflake
@@ -39,3 +40,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+import os
