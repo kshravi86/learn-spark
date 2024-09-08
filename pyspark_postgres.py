@@ -20,3 +20,4 @@ df = spark.read.format("jdbc").option("url", url).option("query", "SELECT table_
 # Display the list of tables
 print("List of tables in the public schema:")
 df.show()
+# This script connects to a Postgres database, reads the list of tables in the public schema, and prints the list to the console.
