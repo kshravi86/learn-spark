@@ -16,10 +16,12 @@ print("Stream Schema:")
 print(df.schema)
 
 # Apply some transformations to the stream
+# Let's assume we want to count the number of words in each language
 df_transformed = df.select(col("value").cast("string")) \
     .select(explode(split(col("value"), ",")).alias("word")) \
-    .groupBy("word") \
-    .count()
+    .withColumn("language", col("word").substr(0, 2)) \
+    .groupBy("language") \
+    .agg({"word": "count"})
 
 # Write the transformed stream to the console
 query = df_transformed.writeStream.outputMode("update") \
