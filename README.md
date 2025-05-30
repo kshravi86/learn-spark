@@ -2,6 +2,21 @@
 
 This project is a simple RESTful API for managing an inventory of items, built with FastAPI. It allows users to perform Create, Read, Update, and Delete (CRUD) operations on inventory items, as well as search for items based on name and description.
 
+## GitHub Codespaces
+
+You can easily develop this project using [GitHub Codespaces](https://github.com/features/codespaces).
+Codespaces provides a fully configured cloud-based development environment, including all necessary dependencies and VS Code extensions.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME)
+
+**Note:** Replace `YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME` in the badge URL with the actual GitHub username and repository name once this project is on GitHub. For now, the placeholder is fine.
+
+The environment is defined by the `.devcontainer/devcontainer.json` file and includes:
+- Python 3.10
+- Pre-installed dependencies from `requirements.txt`
+- Recommended VS Code extensions (Python, Pylance, Ruff)
+- Port 8000 automatically forwarded for the FastAPI application.
+
 ## API Endpoints
 
 All endpoints are prefixed with `/inventory`.
